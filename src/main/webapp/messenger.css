@@ -1,0 +1,595 @@
+body,
+html {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    margin: 0px;
+}
+
+#main {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+}
+
+:root {
+    --send: #326294;
+    --receive: #ffffff;
+    --send1: #ffffff;
+    --receive1: #ffffff;
+}
+
+* {
+    font-family: serif;
+    user-select: none;
+}
+
+#users {
+    width: 20%;
+    height: 100%;
+    background-color: #fff4e6;
+}
+
+#proImg {
+    position: absolute;
+    width: 72px;
+    top: 2%;
+    height: 58px;
+    left: 4%;
+}
+
+#cancel {
+    position: absolute;
+    font-size: 34px;
+    top: 2%;
+    right: 3%;
+}
+
+#Profile {
+    margin: 5% 0% 7% 30%;
+    display: block;
+    width: 31%;
+    height: 106px;
+}
+
+#setting,
+#Contact,
+#group {
+    display: none;
+    width: 20%;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #fff4e6;
+}
+
+#value {
+    height: 5%;
+    width: 68%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17px;
+    position: fixed;
+    bottom: -0.5%;
+    right: 1.3%;
+    display: none;
+}
+
+#send_file {
+    position: absolute;
+    bottom: 0.3%;
+    right: 70%;
+    width: 9.5%;
+    height: 47px;
+    text-align: center;
+    display: none;
+}
+
+#settop {
+    width: 100%;
+    background-color: #fff4e6;
+    height: 8%;
+}
+
+#whole {
+    width: 80%;
+    height: 100%;
+    background-color: #1A2B3C;
+    background: radial-gradient(#334a60, #001d39);
+}
+
+.return {
+    margin: 5% 0% 0% 7%;
+    font-size: 40px;
+}
+
+#file {
+    display: none;
+}
+
+lord-icon {
+    width: 60px;
+    height: 63px;
+}
+
+#info {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    background-color: #fff4e6;
+}
+
+.receive {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+}
+
+.con img {
+    width: 50px;
+    height: 50px;
+}
+
+.con pre {
+    width: 46%;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#userDetails {
+    padding: 8px;
+    display: none;
+    width: 99%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+#userDetails img {
+    width: 50px;
+    height: 47px;
+}
+
+#userDetails span {
+    font-size: 30px;
+    color: white;
+}
+
+.con{
+    margin-top: 30px;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.send {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+
+.delete {
+    margin: 17px 0px 0px 240px;
+    position: absolute;
+}
+
+.send a {
+    color: aquamarine;
+    text-align: right;
+    width: 94%
+}
+
+.send pre {
+    width: 92%;
+    float: left;
+    margin-left: 3%;
+    font-size: 15px;
+    text-align: right;
+    color: var(--send);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.send pre img,.send pre video,.receive pre img,.receive pre video{
+    width: 22%;
+    border-radius: 0;
+}
+
+.receive pre {
+    width: 92%;
+    display: block;
+    font-size: 15px;
+    color: var(--receive);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.receive div span {
+    margin-left: 20px;
+    color: var(--receive1);
+}
+
+.receivespan {
+    width: 6%;
+    font-size: 10px;
+    margin: 15px 0px 0px 0px;
+    transform: translate(-3vw, 2vh);
+
+}
+
+#addacontact,
+#createGroup {
+    margin: 3% auto;
+    cursor: pointer;
+}
+
+.receive div {
+    width: 100%;
+    display: flex;
+    transform: translate(-3vw, 2vh);
+}
+
+.sendspan {
+    font-size: 8px;
+    margin-left: 0px;
+    margin-top: -22px;
+    width: 98%;
+    text-align: right;
+}
+
+#showC {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    display: none;
+}
+
+#addacontact i,
+#createGroup i {
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+#addacontact span,
+#createGroup span {
+    margin: 6px 0px 0px 49px;
+    font-size: 22px;
+}
+
+#table {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.receive #mess {
+    width: 40%;
+    height: 10%;
+    border-radius: 0;
+    margin-right: 4%;
+}
+
+
+#viewmessage {
+    width: 100%;
+    height: 75%;
+    color: white;
+    display: flex;
+    align-items: end;
+    flex-direction: column-reverse;
+}
+
+.receive div img {
+    width: 30px;
+    height: 30px;
+}
+
+.img {
+    margin: auto;
+    font-size: 2.8vh;
+    color: green;
+}
+
+#bg pre {
+    width: 40%;
+    float: left;
+    font-size: 17.5px;
+    margin-left: 14px;
+}
+
+#bg div {
+    clear: both;
+}
+
+#details {
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #fff7ed;
+}
+
+#details1 {
+    display: grid;
+}
+
+input[type="color"] {
+    margin: 4% 0% 9% 17%;
+}
+
+.chats img,.groups img {
+    width: 43px;
+    margin: 23px 12px 0px 10px;
+    height: 41px;
+}
+
+.chats pre,.groups pre {
+    width: 66%;
+    height: 50%;
+    margin-top: 36px;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: serif;
+}
+
+.chats ,.groups {
+    width: 100%;
+    display: flex;
+}
+
+.chats span ,.groups span{
+    margin: 35px 0px 0px 15px;
+    height: 30%;
+    width: 5%;
+    text-align: center;
+}
+
+#det {
+    text-align: center;
+    font-size: 20px;
+    margin: 3% 0% 06% 14%;
+}
+
+#whole #info div {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: darkgoldenrod;
+}
+
+#details::-webkit-scrollbar,
+#table::-webkit-scrollbar,
+#contactAll::-webkit-scrollbar,
+#peoples::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollBar[size="hidden"] {
+    display: none;
+}
+
+select {
+    width: 50%;
+    height: 4%;
+    font-size: 18px;
+    margin: 5% 0% 0% -8%;
+}
+
+#users #info {
+    width: 80%;
+    margin-left: 23%;
+}
+
+#profile {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 1.5%;
+    left: 1%;
+}
+
+img {
+    border-radius: 50%;
+}
+
+#showC div {
+    width: 33%;
+    height: 34%;
+    text-align: center;
+    font-size: 24px;
+}
+
+#showC input[type="submit"],
+#showC button {
+    margin: auto;
+    width: 29%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+#showC input[type="text"],
+#showC input[type="email"] {
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17px;
+    color: white;
+}
+
+#imagevalue {
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    font-size: 19px;
+    left: 0;
+    opacity: 0;
+}
+
+#send_file {
+    background-color: #1A2B3C;
+}
+
+#send_file span {
+    font-size: 25px;
+    color: white;
+    margin-top: 7px;
+}
+
+#createGroupDetails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0px;
+}
+
+#groupDetails{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    color: #ffffff9c;
+    text-shadow: 2px 0px #0000007d;
+    font-size: 25px;
+    display: none;
+}
+
+#groupDetails input[type="text"] {
+    width: 67%;
+    padding: 9.5px 7px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 21px;
+    background: #0000006b;
+    outline: none;
+    color: white;
+}
+
+#groupDetails input[type="text"]:focus {
+    box-shadow: 0px 0px 11px 0px #d2d2d2;
+}
+
+#groupDetails img{
+    width: 93px;
+    height: 93px;
+}
+
+#create {
+    color:white;
+    width: 30%;
+    height: 60%;
+    box-shadow: 0px 0px 42px 4px #000c2c;
+    border-radius: 0.5vw;
+    background: linear-gradient(45deg, #000000, #1a567d);
+}
+
+#peoples {
+    width: 100%;
+    height: 13%;
+    overflow-x: scroll;
+    padding: 12px;
+    display: flex;
+}
+
+#confirm1{
+    position: absolute;
+    top: 75%;
+    left: 46%;
+    background-color: green;
+    padding: 10px 33px;
+    font-size: 18px;
+    display: none;
+    cursor:pointer;
+}
+
+#peoples div{
+    width:12%;
+    margin-right: 10px;
+}
+
+#peoples span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#contactAll{
+	width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    border-top: 2px solid white;
+}
+
+#contactAll div img,
+#peoples div img {
+    width: 40px;
+    height: 40px;
+}
+
+#createGroupDetails i ,#showC i{
+    position: absolute;
+    font-size: 44px;
+    color: black;
+    top: 10px;
+    right: 45px;
+}
+
+input[type="submit"] {
+    margin: auto;
+	width: 145px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 2vw;
+    border: none;
+    font-size: 1.3vw;
+    margin-top: 5vh;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover {
+
+background-color: #00000078;
+    color: white;
+    font-size: 1.4vw;
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<filter>
+		<filter-name>Authentication</filter-name>
+		<filter-class>view.Authentication</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/user/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>chat</filter-name>
+		<filter-class>view.Authorizationfromchatroom</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>chat</filter-name>
+		<url-pattern>/user/SendChatMessage</url-pattern>
+		<url-pattern>/user/notviewmessagecount</url-pattern>
+		<url-pattern>/user/readAllMessage</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>group</filter-name>
+		<filter-class>view.AuthorizationforGroupChat</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>group</filter-name>
+		<url-pattern>/user/SendGroupMessage</url-pattern>
+		<url-pattern>/user/notviewmessageforgroup</url-pattern>
+		<url-pattern>/user/ReadAllGroupMessage</url-pattern>
+	</filter-mapping>
+</web-app>

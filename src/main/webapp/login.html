@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="login.css" rel="stylesheet" type="text/css" />
+    <title>AkMessenger Login</title>
+</head>
+
+<body>
+    <!-- <div id="report">
+        Any Report message
+    </div> -->
+    <div id="main">
+        <div id="top">
+            <div>Login</div>
+        </div>
+        <div id="inputs">
+
+            <div class="sign" id="signup">
+
+                <pre>Email Address : <input type="email" id="mail" ></pre>
+                <p></p>
+                <input type="submit" class="submit" onclick="sendOTP()" value="Submit">
+
+            </div>
+
+            <div class="sign" id="signup1">
+
+                <pre>Enter OTP  : <input type="number" min="0" id="otp"></pre>
+                <p></p>
+                <div style="display: flex;justify-content: space-around;">
+                    <div id="second" class="hover" onclick="sendOTP()">Change OTP</div>
+                    <div class="hover" onclick="init()">Change Email</div>
+                </div>
+                <input type="submit" class="submit" onclick="checkOTP()" value="Submit">
+
+            </div>
+
+            <div class="sign" id="signup2">
+                <pre>Name             : <input type="text" id="Name"/></pre>
+                <p></p>
+                <pre>Enter password   : <input type="password" id="password"/></pre>
+                <p></p>
+                <pre>Confirm password : <input type="password" id="password1"/></pre>
+                <p></p>
+                <input type="file" id="file" accept="image/*">
+                <input type="checkbox" id="check" />Show password<p></p>
+                <input type="submit" class="submit" onclick="signup()" value="Submit">
+
+            </div>
+
+            <div class="sign" id="signin">
+
+                <pre>Enter password : <input type="password" id="password2"/></pre>
+                <p></p>
+                <input type="checkbox" onclick="password2.type=(password2.type == 'password')?'text':'password'" />Show
+                password<p></p>
+                <div
+                    onclick="document.getElementById('signin').style='display:none';document.getElementById('chagePass').style='display:block'">
+                    Forgot password</div>
+                <input type="submit" class="submit" onclick="signin()" value="Submit">
+
+            </div>
+
+            <div class="sign" id="chagePass">
+
+                <pre>Enter password   : <input type="password" id="password3"/></pre>
+                <p></p>
+                <pre>Confirm password : <input type="password" id="password4"/></pre>
+                <p></p>
+                <input type="checkbox" id="check1" />Show password<p></p>
+                <input type="submit" class="submit" onclick="changePassword()" value="Submit">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

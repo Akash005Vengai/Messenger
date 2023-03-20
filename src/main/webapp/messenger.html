@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="messenger.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/ebce3f4fe2.js"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <title>AkMessenger</title>
+</head>
+
+<body>
+    <img src="" id="profile" />
+    
+    <div id="main">
+        <div id="users">
+            <div id="info">
+                <i class="fa-solid fa-user-group img" onclick="document.getElementById('group').style='display:block';showGroups()"></i>
+                <i class="fa-solid fa-user img" onclick="document.getElementById('Contact').style='display:block'"></i>
+                <i class="fa-solid fa-gear img" onclick="document.getElementById('setting').style='display:block';updateSetting()"></i>
+            </div>
+            <div id="details">
+                <div id="details1">
+
+                </div>
+            </div>
+        </div>
+        <div id="whole">
+            <div id="info">
+                <div>Messenger</div>
+            </div>
+            <div id="userDetails">
+
+            </div>
+            <div id="viewmessage">
+                <div id="table">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact">
+        <div id="settop">
+            <i class="fa-solid fa-arrow-left return" onclick="document.getElementById('Contact').style='display:none'"></i>
+        </div>
+        <div id="addacontact">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Add a Contact</span>
+        </div>
+        <div id="contact1">
+        </div>
+    </div>
+
+    <div id="group">
+        <div id="settop">
+            <i class="fa-solid fa-arrow-left return" onclick="document.getElementById('group').style='display:none'"></i>
+        </div>
+        <div id="createGroup">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Create a group</span>
+        </div>
+        <div id="details2"></div>
+    </div>
+
+    <div id="setting">
+        <div id="settop">
+            <i class="fa-solid fa-arrow-left return" onclick="document.getElementById('setting').style='display:none'"></i>
+        </div>
+
+        <div id="bg">
+            <img id="Profile" src="" />
+            <input type="file" id="file" accept="image/*" />
+            <pre>Show Profile :</pre> <select onchange="sender('showProfile',this.value)" id="showProfile">
+                <option value="show">Everyone</option>
+                <option value="contact">Show Contact only</option>
+                <option value="notshow">Nobody</option>
+            </select>
+            <div></div>
+            <pre>Send name color       : </pre> <input type="color" onchange="sender('senderName',this.value)"
+                id="sendNameColor" /><br>
+            <div></div>
+            <pre>Send message color    : </pre> <input type="color" onchange="sender('sendColor',this.value)"
+                id="sendTextColor" /><br>
+            <div></div>
+            <pre>Receive name color    : </pre> <input type="color" onchange="sender('receiveName',this.value)"
+                id="receiveNameColor" /><br>
+            <div></div>
+            <pre>Receive message color : </pre> <input type="color" onchange="sender('receiveColor',this.value)"
+                id="receiveTextColor" /><br>
+            <div></div>
+
+        </div>
+
+    </div>
+
+    <input type="text" id="value" value="" />
+
+    <div id="send_file">
+        <span>Send Image</span>
+        <input type="file" multiple accept="*/*" id="imagevalue" />
+    </div>
+
+    <div id="showC">
+        <div>
+            <i class="fa-solid fa-xmark" onclick="document.getElementById('showC').style='display:none'"></i>
+            mail:<input type="email" id="Contactmail">
+            <p></p>
+            name:<input type="text" id="Contactname">
+            <p></p>
+            <input type="submit" id="Contactsubmit">
+            <p></p>
+        </div>
+    </div>
+
+    <div id="createGroupDetails">
+        <i class="fa-solid fa-xmark" onclick="hide()"></i>
+        <div id="create">
+            <div id="peoples">
+               
+            </div>
+            <div id="contactAll">
+               
+            </div>
+        </div>
+        <div id="confirm1">Confirm</div>
+        <div id="groupDetails">
+            <img src="user/sendGroupProfile?id=0" id="img" onclick="groupImage.click()">
+            <input type="file" accept="image/*" id="groupImage" style="display:none"/>
+            <p></p>
+            <pre>Name        :    <input type="text" id="groupName"/></pre>
+            <pre>Description :    <input type="text" id="groupDes"/></pre>
+            <pre><input type="submit" onclick="creategroup()"/></pre>
+        </div>
+    </div>
+
+    <script src="messenger.js"></script>
+</body>
+
+</html>
