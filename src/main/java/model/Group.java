@@ -44,7 +44,6 @@ public class Group extends Thread{
 					members.add(rs.getString(2));
 				}
 			
-			System.out.println(Admins+"\n"+members);
 			pre = ApplicationVariables.dbConnection.prepareStatement("select * from groupname where id =?");
 			pre.setInt(1, Gid);
 			rs = pre.executeQuery();
@@ -59,7 +58,6 @@ public class Group extends Thread{
 				messagestatus status = rs.getString(5).equals("delete")?messagestatus.delete:rs.getString(5).equals("forme")?messagestatus.forme:messagestatus.notdelete;
 				messages.add(new chatMessage(rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(6),status,(rs.getString(7).equals("view"))?message.view:message.notview));
 			}
-			System.out.println(ApplicationVariables.groups.size());
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

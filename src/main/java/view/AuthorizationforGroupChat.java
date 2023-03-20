@@ -19,7 +19,9 @@ import common.ApplicationVariables;
  */
 public class AuthorizationforGroupChat extends HttpFilter implements Filter {
        
-    /**
+    private static final long serialVersionUID = 6542070938555664779L;
+
+	/**
      * @see HttpFilter#HttpFilter()
      */
     public AuthorizationforGroupChat() {

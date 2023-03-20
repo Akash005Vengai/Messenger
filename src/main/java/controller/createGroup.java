@@ -78,20 +78,18 @@ public class createGroup extends HttpServlet {
 			pre.setString(3, user);
 			pre.setInt(4, id);
 			pre.execute();
-			pre = ApplicationVariables.dbConnection.prepareStatement("insert into groupPeople value(?,?,?,now())");
+			pre = ApplicationVariables.dbConnection.prepareStatement("insert into groupPeople values(?,?,?,now())");
 			pre.setInt(1, id);
 			pre.setString(2, user);
 			pre.setString(3, "Admin");
 			pre.execute();
 			for(String user1:users.split(",")){
-				System.out.println(user1);
-				pre = ApplicationVariables.dbConnection.prepareStatement("insert into groupPeople value(?,?,?,now())");
+				pre = ApplicationVariables.dbConnection.prepareStatement("insert into groupPeople (id,user,role,jointime) values(?,?,?,now())");
 				pre.setInt(1, id);
-				pre.setString(2, user1);
+				pre.setString(2, user1.replace("\"",""));
 				pre.setString(3, "Member");
-				pre.execute();
+				pre.executeUpdate();
 			}
-				
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
