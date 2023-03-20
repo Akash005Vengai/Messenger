@@ -47,7 +47,7 @@ public class SendOTP extends HttpServlet {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/json");
-            con.setRequestProperty("api-key","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" );
+            con.setRequestProperty("api-key","" );
             con.setDoOutput(true);
             
             String payload = "{\"sender\":{\"email\":\"ak005messenger@gmail.com\"},\"to\":[{\"email\":\""+email+"\"}],\"subject\":\"Verification mail don't share it .Valid for 2 minute only \",\"textContent\":\"otp code :"+otp+"\"}";
